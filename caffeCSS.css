@@ -1,0 +1,690 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+   Am folosit acest "reset" pentru a elimina setarile default, cum ar fi dimensiunea fontului, inaltimile, etc.
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+input{
+	box-sizing: border-box;
+	outline: none;
+}
+body {
+    line-height: 1;
+    font-family: open sans;
+    font-size: 17px;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* De aici incepe CSS-ul propriu */
+
+.container{
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* Stylelul pentru Topbar */
+
+.topbar{
+    display: inline-block;
+    width: 100%;
+    height: 30px;
+    float: left;
+    background-color: bisque;
+    font-size: 12px;
+    font-weight: 600;
+    position: relative;
+}
+
+.topleft{
+    float: left;
+}
+
+.topleft ul{
+    color: #333;
+}
+.topcenter{
+    float: left;
+    text-align: center;
+    margin: 0 25px;
+}
+
+.topright{
+    float: right;
+}
+
+.topbar ul{
+    line-height: 30px;
+}
+
+.topbar ul li{
+    list-style-type:  none;
+    display: inline-block;
+    position: relative;
+}
+
+.topbar ul li a{
+    text-decoration: none;
+    display: inline-block;
+    color: #461515ad;
+    padding: 0 5px;
+    width: 100%;
+    text-align: center;
+    -webkit-transation: 300ms;
+}
+
+.topbar ul li a:hover{
+    color: rgba(110, 25, 25, 0.384);
+}
+
+/* Submeniu */
+.topbar ul li ul{
+    position: absolute;
+    display: none;
+    z-index: 999;
+    background-color: rgba(110, 25, 25, 0.384);
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border: 1px solid rgba(110, 25, 25, 0.384);
+}
+
+.topbar ul li ul li{
+    width: 100%;
+}
+
+.topbar ul li ul li a{
+    padding: 0;
+}
+
+/*.topbar ul li ul.myprofile-dropdown{
+    min-width: 120px;
+}*/
+
+/* Header-ul */
+.header{
+    display: inline-block;
+    width: 100%;
+    float: left;
+    padding: 15px 0;
+    border-bottom: 1px solid #00000010;
+    background-color: rgb(245, 182, 106);
+}
+
+.header .logo{
+    float: left;
+    width: 20%;
+}
+
+.header .searchbar{
+    width: 45%;
+    height: 50px;
+    float: left;
+}
+
+.searchbar .searchField{
+    width: 70%;
+    height: 50px;
+    padding: 15px;
+    border-radius: 50px;
+    border: 1px solid gainsboro;
+}
+
+.header .headerright{
+    float: right;
+}
+
+.header .headerright ul li{
+    display: inline-block;
+    padding: 10px 0;
+}
+
+.header .headerright ul li a{
+    text-decoration: none;
+    margin-left: 15px;
+    color: #333;
+}
+
+.header .headerright ul li .signBtn{
+    padding: 40px 50 px;
+    border-radius: 100px;
+    background-color: bisque;
+    color: #461515ad;
+    font-weight: 600;
+}
+
+/* Meniul cu bauturile */
+
+.productContent{
+    display: inline-block;
+    width: 100%;
+    float: left;
+    padding: 5px 0;
+    position: relative;
+}
+
+.productContent .productCategories{
+    width: 20%;
+    float: left;
+    padding: 7px 15px;
+    border-radius: 8px;
+    border: 1px solid #dfdcdc;
+    background-color: bisque;
+}
+
+.productContent .productCategories a:hover{
+    color: rgba(110, 25, 25, 0.384);
+}
+
+.productContent .productCategories a i.fa-caret-right:hover{
+    color: rgba(110, 25, 25, 0.384);
+}
+
+.productContent .productCategories ul li{
+    display: inline-block;
+    width: 70%;
+    float: left;
+    margin: 5px 0 10px;
+}
+
+.productContent .productCategories ul li a i.fa-caret-right{
+    margin-left: 5px;
+    color: #461515ad;
+    vertical-align: middle;
+    margin-top: 1px;
+}
+
+.productContent .productCategories ul li a{
+    display: inline-block;
+    padding: 5px 0;
+    text-decoration: none;
+    color: #461515ad;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.megamenu{
+    position: absolute;
+    width: 20%;
+    background-color: rgb(233, 198, 156);
+    border: 1px solid gainsboro;
+    left: 22%;
+    top: 1.5%;
+    min-height: 10px;
+    border-radius: 8px;
+    z-index: 100;
+    display: none;
+}
+
+.productContent .productCategories ul li ul{
+    max-width: 22%;
+    float: left;
+    padding: 15px;
+    cursor: pointer;
+}
+
+.productContent .productCategories ul li ul h3{
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.productContent .productCategories ul li ul li{
+    margin: 0;
+    display: inline-block;
+    float: right;
+}
+
+.productContent .productCategories ul li ul li a{
+    color: #333;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.productContent .productCategories ul li ul li a:hover{
+    color: rgba(110, 25, 25, 0.384);
+}
+
+/* Stilul slider-ului */
+
+.productContent .productSlider{
+    width: 70%;
+    float: right;
+    display: inline-block;
+    background-color: bisque;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #dfdcdc;
+}
+
+.sliderInner{
+    width: 100%;
+    height: 365px;
+    display: inline-block;
+    padding: 5px;
+}
+
+.sliderInner img{
+    width: 100%;
+    height: 379px;
+}
+
+.cycle-control{
+    position: absolute;
+    top: 70%;
+    left: 15%;
+    z-index: 100;
+    width: 70%;
+}
+
+.cycle-control span{
+    width: 35px;
+    height: 35px;
+    border-radius: 50px;
+    font-size: 28px;
+    text-align: center;
+    line-height: 35px;
+    display: inline-block;
+    background-color:bisque;
+    color: #fff;
+    position: absolute;
+    margin: 0 25px;
+}
+
+.cycle-control #next{
+    right: 0;
+}
+
+.offer-card{
+	width: 268px;
+	height: 215px;
+	display: inline-block;
+	margin-left: 1px;
+	margin-top: 15px;
+	border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #dfdcdc;
+}
+.offer-card img{
+	width: 268px;
+    height: 215px;
+    position: relative;
+}
+
+/* Zona sponsorilor */
+
+.partner-area{
+    width: 100%;
+    float: left;
+    display: inline-block;
+    padding: 25px 0;
+}
+
+/* Header parteneri */
+.partner-area h3{
+    font-size: 28px;
+    color: #333;
+    text-transform: uppercase;
+    border-bottom: 1px solid #d2d2d2;
+    font-weight: 600;
+    padding: 10px 0;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.partner-area .col-3{
+    width: 24%;
+    float: left;
+    display: inling-block;
+    border-radius: 4px;
+    overflow: hidden;
+    margin: 0 3.5% 35px;
+}
+
+.partner-area .col-3 img{
+    float: left;
+}
+.partner-area a{
+    font-size: 14px;
+    columns: #333;
+    text-decoration: none;
+    text-align: center;
+    position: relative;
+}
+
+.partner-area .caption{
+    padding: 10px 0;
+}
+
+.partner-area a h4{
+    font-zise: 20px;
+    padding: 8px 0;
+    font-weight: 600;
+    line-height: 22px;
+    color: #737373;
+    text-align: center;
+}
+
+/* Butonul pentru vizionarea detaliilor pentru parteneri
+
+.partnerViewBtn{
+    font-size: 18px;
+    font-weight: 700;
+    color: #333;
+    visibility: visible;
+    background-color: bisque;
+    border: none;
+    width: 100%;
+    padding: 10px 25px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.partner-area a:hover .partnerViewBtn{
+    color: goldenrod;
+}
+
+*/
+
+/* What we recommend */
+
+.mostPopular{
+    width: 100%;
+    display: inline-block;
+    float: left;
+    padding: 15px 0;
+}
+
+.mostPopular h3{
+    font-size: 28px;
+    columns: #333;
+    text-transform: uppercase;
+    border-bottom: 1px solid #d2d2d2;
+    font-weight: 600;
+    padding: 10px 0;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.owl-carousel .owl-nav{
+    position: absolute;
+    width: 100%;
+    top: 40%;
+}
+
+.owl-carousel .owl-nav button.owl-next span,
+.owl-carousel .owl-nav button.owl-prev span{
+    width: 45px;
+    height: 45px;
+    font-size: 48px;
+    background-color: bisque;
+    display: inline-block;
+    line-height: 35px;
+    border-radius: 50px;
+    color: #fff;
+}
+
+.owl-carousel .owl-nav button.owl-prev{
+    left: -20px;
+    position: absolute;
+}
+
+.owl-carousel .owl-nav button.owl-next{
+    right: -20px;
+    position: absolute;
+}
+
+/* Footer */
+
+.footer{
+    width: 100%;
+    display: inline-block;
+    float: left;
+    padding: 25px 0;
+    background-color: bisque;
+}
+
+.footer .col-3{
+    width: 24%;
+    float: left;
+}
+
+.footer p{
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #333;
+    line-height: 18px;
+}
+
+.footer p strong{
+    font-weight: 700;
+}
+
+.copyright{
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    float: left;
+    background-color: #ffa80080;
+    padding: 10px 0;
+    color: #333;
+}
+
+/* Login Form */
+
+.loginBox{
+	width: 100%;
+	height: 100%;
+	padding: 15px;
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: #fff2d7;
+	border-radius: 4px;
+    z-index: 999;
+    float: left;
+}
+.loginBox h3{
+	font-size: 28px;
+	color: #333;
+	padding-bottom: 35px;
+}
+.closeBtn{
+	float: right;
+    padding: 15px;
+    width: 10px;
+	border-radius: 20px;
+	background-color: #ffa800;
+	color: #fff;
+    cursor: pointer;
+    position: absolute;
+    right: 50px;
+}
+.loginForm,.registerForm{
+	padding: 55px;
+	width: 45%;
+}
+.loginForm{
+	float: left;
+}
+.registerForm{
+	float: left;
+}
+.textField{
+	width: 100%;
+	height: 45px;
+	margin-bottom: 15px;
+	background-color: transparent;
+	border: 1px solid #ffa800;
+	border-radius: 4px;
+	color: #333;
+	font-size: 18px;
+	padding: 5px 10px;
+}
+.submitBtn{
+	width: 100%;
+	height: 45px;
+	background-color: #ffa800;
+	border:none;
+	border-radius: 4px;
+	font-size: 20px;
+	text-transform: uppercase;
+	color: #fff;
+	font-weight: 700;
+}
+
+/* ProductView */
+
+.productViewBox, .productViewBox2, .aboutViewBox{
+    width: 50%;
+    height: 50%;
+    margin: auto auto;
+    background-color: gray;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    border: 1px solid #ffa800;
+    border-radius: 4px;
+    background-color: #fff2d7;
+    box-shadow: 0 5px 250px #000;
+    padding: 15px 25px;
+    overflow-y: auto;
+    display: none;
+}
+
+.products h3{
+    font-size: 24px;
+    font-weight: 700;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid;
+    text-align: center;
+}
+
+.productViewBox-closeBtn, .productViewBox-closeBtn2, .aboutViewBox-closeBtn{
+    float: right;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 35px;
+    height: 35px;
+    margin: 10px;
+    border-radius: 50px;
+    background-color: #ffa800;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    line-height: 35px;
+}
+
+.productViewBoxImg, .aboutViewBoxImg{
+    width: 40%;
+    float: left;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #dadada;
+}
+
+.productViewBoxImg{
+    width: 36%;
+}
+.aboutViewBoxImg img{
+    width: 100%;
+}
+
+.productViewBoxDetail{
+    width: 50%;
+    float: right;
+}
+
+.productViewBoxDetail h5{
+    font-size: 18px;
+    margin-bottom: 15px;
+    line-height: 28px;
+    font-weight: 500;
+    color: #333;
+}
+
+.productViewBoxDetail h5 b{
+    font-weight: 600;
+    color: #000;
+}
+
+.steluta{
+    text-align: center;
+}
+
+.productViewBoxDetail .addtobag{
+    border: 1px solid;
+    color: #ffa800;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.productViewBoxDetail .buynow{
+    border: 1px solid;
+    color: #ffa800;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.productViewBtn, .productViewBtn2, .productViewBtn404{
+    background-color: bisque;
+    cursor: pointer;
+    border: none;
+    border-radius: 3px;
+    font-size: 10px;
+    font-weight: 700;
+}
