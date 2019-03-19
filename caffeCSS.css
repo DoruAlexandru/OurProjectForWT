@@ -183,7 +183,7 @@ table {
 }
 
 .header .headerright ul li .signBtn{
-    padding: 40px 50 px;
+    padding: 40px 50px;
     border-radius: 100px;
     background-color: bisque;
     color: #461515ad;
@@ -375,7 +375,7 @@ table {
 .partner-area .col-3{
     width: 24%;
     float: left;
-    display: inling-block;
+    display: inline-block;
     border-radius: 4px;
     overflow: hidden;
     margin: 0 3.5% 35px;
@@ -386,7 +386,7 @@ table {
 }
 .partner-area a{
     font-size: 14px;
-    columns: #333;
+    color: #333;
     text-decoration: none;
     text-align: center;
     position: relative;
@@ -397,7 +397,7 @@ table {
 }
 
 .partner-area a h4{
-    font-zise: 20px;
+    font-size: 20px;
     padding: 8px 0;
     font-weight: 600;
     line-height: 22px;
@@ -437,7 +437,7 @@ table {
 
 .mostPopular h3{
     font-size: 28px;
-    columns: #333;
+    color: #333;
     text-transform: uppercase;
     border-bottom: 1px solid #d2d2d2;
     font-weight: 600;
